@@ -31,7 +31,7 @@ def getCoins(n):
 
 
 def main():
-    n = 31
+    n = 982361
     coincount = getCoins(n)
     print("{} cents can be made with {} coins".format(n, coincount))
 
