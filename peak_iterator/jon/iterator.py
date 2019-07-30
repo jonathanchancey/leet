@@ -10,10 +10,17 @@ class PeakableInterface(object):
         self.next()
 
     def peek(self):
+
+        if not self.nextExists:
+            return False
+
         return self.nextVal
 
     def next(self):
         # Invoking next() method should ensure that the ‘iter’ object is advanced before returning the cached next value in the form of ‘next’
+        # ensures next value exists
+
+        tempVal = self.nextVal
 
         if not self.nextExists:
             return False
@@ -28,7 +35,7 @@ class PeakableInterface(object):
         # if tempNext:
         #     self.nextVal = tempNext
             
-        return self.nextVal
+        return tempVal
         
     def hasNext(self):
         return self.nextExists
@@ -51,6 +58,7 @@ def main():
     print(pi.next())
     print(pi.hasNext())
     print(pi.next())
+    print(pi.peek()) # should not return
     print(pi.next())
     print(pi.hasNext())
 
