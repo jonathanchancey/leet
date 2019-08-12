@@ -1,5 +1,4 @@
-# returns random value based on declared percentages
-
+"""returns random value based on declared percentages"""
 import random
 
 
