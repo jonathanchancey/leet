@@ -13,11 +13,12 @@ def main(nums,per):
         j = j + i
         per_sum.append(j) 
 
-    # compares the randomly generated value to the sumed percentages for pseudo random selection
-    for i in per_sum:
-        if i > randint:
-            return i
-
+    # compares the randomly generated value to the summed percentages for pseudo random selection
+    for i in range(len(per_sum)):
+        # print(int(i))
+        if per_sum[i] > randint:
+            return nums[i]
+    
 
 if __name__ == '__main__':
     # given values for testing
