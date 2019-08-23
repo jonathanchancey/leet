@@ -1,7 +1,7 @@
 import math
 n=13
 r=[]
-def s(c, n):
+def s(c,n):
     u=sum(i**2 for i in c)
     if u==n:
         return len(c)
